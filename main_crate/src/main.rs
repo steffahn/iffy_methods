@@ -2,7 +2,7 @@ use std::cell::RefCell;
 
 fn foo(x: &RefCell<Box<[u8]>>) {
     let y = x.borrow();
-    let z = y.as_ref();
+    let z: &[u8] = y.as_ref();
 
     println!("{:?}", z);
 }
